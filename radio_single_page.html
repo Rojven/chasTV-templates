@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- desktop navbar -->
+
+    <header class="header">
+        <div class="container container_header">
+            <div class="header__wrapper">
+                <div class="header__wrapper header__wrapper-links">
+                <a href="/">
+                    <img src="./img/logo.svg" alt="logo" class="header__logo" />
+                </a>
+                <ul class="header__wrapper header__wrapper-links">
+                    <li class="header__link"><a href="/channels"><i class="fa-solid fa-tv"></i> Каналы</a></li>
+                    <li class="header__link"><a href="/radio"><i class="fa-solid fa-tower-cell"></i> Радио</a></li>
+                </ul>
+                </div>
+                <div class="toggler">
+                    <span>🌜</span>
+                    <span>🌞</span>
+                    <div class="toggler__ball"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--  mobile navbar -->
+
+    <header class="header header_mobile">
+        <div class="container container_header">
+            <div class="header__wrapper header__wrapper_mobile">
+                <div class="header__wrapper header__wrapper-links header__wrapper-links_mobile">
+                <a href="/">
+                    <img src="./img/logo.svg" alt="logo" class="header__logo header__logo_mobile" />
+                </a>
+                <div class="toggler toggler_upper-mobile">
+                    <span>🌜</span>
+                    <span>🌞</span>
+                    <div class="toggler__ball"></div>
+                </div>
+                </div> 
+                <ul class="header__wrapper header__wrapper-links header__wrapper-links_mobile">
+                    <li class="header__link"><a href="/channels"><i class="fa-solid fa-tv"></i> Каналы</a></li>
+                    <li class="header__link"><a href="/radio"><i class="fa-solid fa-tower-cell"></i> Радио</a></li>
+                    <li class="toggler toggler_bottom-mobile">
+                        <span>🌜</span>
+                        <span>🌞</span>
+                        <div class="toggler__ball"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+<div class="page-wrapper">
+
+    <!-- radio-page section -->
+
+    <section class="radio-page">
+        <div class="container">
+            <div class="radio-page__wrapper">
+                <div class="radio-page__player-wrapper">
+                    <div class="radio-page__title">
+                        <div class="radio-page__img">
+                        <img src="./img/radio-rossii.svg" alt="channel-icon" />
+                        </div>
+                        <h1>Радио России</h1>
+                        <div class="radio-page__player">
+                            <i id="playPause" class="fa-solid fa-play"></i>
+                            <audio id="radioPlayer" src="https://icecast-vgtrk.cdnvideo.ru/rrzonam" preload="auto"></audio>
+                            <div class="radio-page__volume">
+                                <i id="volumeIcon" class="fa-solid"></i>
+                                <input id="volumeBar" type="range" min="0" max="100" class="radio-page__volume-bar"/>
+                            </div>
+                        </div>  
+                        </div>
+                    </div>
+                    <div class="adsT-wrapper adsT-wrapper_channel-page">
+
+                        <!-- ads block -->
+        
+                        <div class="adsT">{AdsBlock}</div>
+        
+                    </div>
+                </div>
+                
+                    
+                <div class="cards__block">
+                    <h2>Слушайте также:</h2>
+                    <div class="cards__wrapper">
+    
+                    <!--  card template -->
+    
+                        <a href="/radio/:id" class="card">
+                        <div class="card__onhover">
+                            <h3>Россия</h3>
+                        </div>
+                        <img alt="#" src="./img/radio-rossii.svg"/>
+                        <h3>Россия</h3>   
+                        </a>
+    
+                        <!-- insert cards here -->
+    
+                    </div>
+                </div>
+
+                <div class="descr">
+                    <div class="channel-page__title">
+                        <div class="channel-page__img">
+                        <img src="./img/radio-rossii.svg" alt="channel-icon" style="width: 100%;"/>
+                        </div>
+                        <h2>Радио: Радио России</h2>
+                    </div>
+                    <ul class="descr__wrapper">
+                        <li class="descr__item"><p><h3>Описание:</h3> {descr}</p></li>
+                        <li class="descr__item"><p><h3>Тематика:</h3> {descr}</p></li>
+                        <li class="descr__item"><p><h3>Страна:</h3> {descr}</p></li>
+                        <li class="descr__item"><p><h3>Язык:</h3> {descr}</p></li>
+                    </ul>
+                </div>
+
+                <div class="comments">
+                    <h2>Оставьте комментарий:</h2>
+                    <div id="vk_comments"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                <p class="footer__text">Час.ТВ - смотри онлайн тв в прямом эфире в любой точке мира с любого устройсва. Стабильность и высокое качествотв трансляций делают Час.ТВ незаменимым спутников любого поклонника телевидения.</p>
+                <ul class="footer__wrapper-links">
+                    <li class="footer__link"><a href="/about">О проекте</a></li>
+                    <li class="footer__link"><a href="/vacancies">Вакансии</a></li>
+                    <li class="footer__link"><a href="/terms">Соглашение</a></li>
+                    <li class="footer__link"><a href="/contact">Контакты</a></li>
+                </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- cookie popup -->
+
+    <div class="cookie-popup">
+        <h2>Мы ценим вашу конфиденциальность</h2>
+        <p>Мы используем файлы cookie, чтобы улучшить ваш просмотр, показывать персонализированную рекламу или контент, а также анализировать наш трафик. Нажимая «Принять всё», вы соглашаетесь на использование нами файлов cookie.</p>
+        <button class="cookie-popup__button">Принять</button>
+    </div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+         VK.init({apiId: 51476870, onlyWidgets: true});
+         VK.Widgets.Comments('vk_comments', {limit: 10});
+        }
+    </script>
+
+    <script src="./script.js"></script>
+</body>
+</html>

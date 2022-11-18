@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- desktop navbar -->
+
+  <header class="header">
+    <div class="container container_header">
+      <div class="header__wrapper">
+        <div class="header__wrapper header__wrapper-links">
+          <a href="/">
+            <img src="./img/logo.svg" alt="logo" class="header__logo" />
+          </a>
+          <ul class="header__wrapper header__wrapper-links">
+            <li class="header__link"><a href="/channels"><i class="fa-solid fa-tv"></i> Каналы</a></li>
+            <li class="header__link"><a href="/radio"><i class="fa-solid fa-tower-cell"></i>Радио</a></li>
+          </ul>
+        </div>
+        <div class="toggler">
+          <span>🌜</span>
+          <span>🌞</span>
+          <div class="toggler__ball"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+   <!--  mobile navbar -->
+
+   <header class="header header_mobile">
+    <div class="container container_header">
+      <div class="header__wrapper header__wrapper_mobile">
+        <div class="header__wrapper header__wrapper-links header__wrapper-links_mobile">
+          <a href="/">
+            <img src="./img/logo.svg" alt="logo" class="header__logo header__logo_mobile" />
+          </a>
+          <div class="toggler toggler_upper-mobile">
+            <span>🌜</span>
+            <span>🌞</span>
+            <div class="toggler__ball"></div>
+          </div>
+        </div> 
+        <ul class="header__wrapper header__wrapper-links header__wrapper-links_mobile">
+          <li class="header__link"><a href="/channels"><i class="fa-solid fa-tv"></i>Каналы</a></li>
+          <li class="header__link"><a href="/radio"><i class="fa-solid fa-tower-cell"></i>Радио</a></li>
+          <li class="toggler toggler_bottom-mobile">
+            <span>🌜</span>
+            <span>🌞</span>
+            <div class="toggler__ball"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+
+    <!-- vacancies section -->
+
+    <section class="vacancies">
+      <div class="container">
+        <div class="vacancies__wrapper">
+            <h1>Вакансии</h1>
+            <p>Вакансий нет.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <p class="footer__text">Час.ТВ - смотри онлайн тв в прямом эфире в любой точке мира с любого устройсва. Стабильность и высокое качествотв трансляций делают Час.ТВ незаменимым спутников любого поклонника телевидения.</p>
+          <ul class="footer__wrapper-links">
+              <li class="footer__link"><a href="/about">О проекте</a></li>
+              <li class="footer__link"><a href="/vacancies">Вакансии</a></li>
+              <li class="footer__link"><a href="/terms">Соглашение</a></li>
+              <li class="footer__link"><a href="/contact">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- cookie popup -->
+
+  <div class="cookie-popup">
+    <h2>Мы ценим вашу конфиденциальность</h2>
+    <p>Мы используем файлы cookie, чтобы улучшить ваш просмотр, показывать персонализированную рекламу или контент, а также анализировать наш трафик. Нажимая «Принять всё», вы соглашаетесь на использование нами файлов cookie.</p>
+    <button class="cookie-popup__button">Принять</button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
